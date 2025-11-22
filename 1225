@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互動應用中心</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-200 min-h-screen flex flex-col text-slate-800">
+
+    <!-- Navbar / Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i data-lucide="layout-grid" class="text-indigo-600 w-6 h-6"></i>
+                <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">
+                    互動應用中心
+                </h1>
+            </div>
+            <div class="text-sm text-slate-500 font-medium">
+                V 1.0
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl w-full space-y-12">
+            
+            <!-- Hero Section -->
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">
+                    選擇您的應用程式
+                </h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    集合了休閒娛樂與課堂管理的實用工具，請點擊下方卡片進入相應功能。
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Card 1: Tetris -->
+                <a href="tetris.html" class="group block bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-lg card-hover relative">
+                    <div class="h-2 bg-gradient-to-r from-blue-400 to-cyan-300"></div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="gamepad-2" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                            俄羅斯方塊
+                        </h3>
+                        <p class="text-slate-600 mb-6 line-clamp-2">
+                            經典的益智消除遊戲。挑戰您的反應速度與策略思維，透過堆疊方塊來獲得最高分。
+                        </p>
+                        <div class="flex items-center text-blue-600 font-semibold text-sm">
+                            開始遊戲 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+                    <!-- Decorative Background Shape -->
+                    <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-500 z-0"></div>
+                </a>
+
+                <!-- Card 2: Lucky Wheel -->
+                <a href="luckywheel.html" class="group block bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-lg card-hover relative">
+                    <div class="h-2 bg-gradient-to-r from-pink-500 to-rose-400"></div>
+                    <div class="p-8 relative z-10">
+                        <div class="w-14 h-14 bg-pink-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="pie-chart" class="w-8 h-8 text-pink-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-pink-600 transition-colors">
+                            幸運輪盤
+                        </h3>
+                        <p class="text-slate-600 mb-6 line-clamp-2">
+                            公平公正的隨機抽獎工具。適用於活動抽獎、決定午餐吃什麼，或是課堂點名互動。
+                        </p>
+                        <div class="flex items-center text-pink-600 font-semibold text-sm">
+                            立即轉動 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+                     <!-- Decorative Background Shape -->
+                     <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-pink-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-500 z-0"></div>
+                </a>
+
+                <!-- Card 3: Roll Call -->
+                <a href="rollcall.html" class="group block bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-lg card-hover relative">
+                    <div class="h-2 bg-gradient-to-r from-emerald-400 to-green-300"></div>
+                    <div class="p-8 relative z-10">
+                        <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="users" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                            班級點名系統
+                        </h3>
+                        <p class="text-slate-600 mb-6 line-clamp-2">
+                            高效的課堂管理工具。支援名單匯入、隨機點名、缺席記錄，讓老師輕鬆掌握出缺勤狀況。
+                        </p>
+                        <div class="flex items-center text-emerald-600 font-semibold text-sm">
+                            進入系統 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+                     <!-- Decorative Background Shape -->
+                     <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-500 z-0"></div>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm">
+                &copy; 2024 互動應用中心. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
